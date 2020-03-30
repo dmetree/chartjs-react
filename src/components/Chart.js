@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, Line, Pie } from 'react-chartjs-2';
 import s from './Chart.module.css';
 
 
@@ -39,10 +39,20 @@ class Chart extends Component {
     render() {
         return (
             <div className={s.chart}>
+                <Pie
+                    data={this.state.chartData}
+                    options={{}}
+                />
                 <Bar
                     data={this.state.chartData}
                     options={{}}
                 />
+              
+                <Line
+                    data={this.state.chartData}
+                    options={{}}
+                />
+                
             </div>
 
         )
